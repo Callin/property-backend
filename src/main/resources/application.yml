@@ -1,5 +1,5 @@
 spring:
   datasource:
-    data-username: property_user
-    data-password: Property100!
+    username: property_user
+    password: Property100!
     url: jdbc:mysql://localhost:3306/property?autoReconnect=true&useSSL=false

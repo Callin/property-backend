@@ -1,5 +1,6 @@
 package xyz.vegaone.property.controller;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -12,14 +13,15 @@ import xyz.vegaone.property.dto.User;
 import xyz.vegaone.property.service.UserService;
 
 @RestController(value = "/user")
+@Slf4j
 public class UserController {
 
     private UserService userService;
 
     @GetMapping(value = "/{id}")
-    public User getUser(@PathVariable Long id) {
-
-        return userService.getUser(id);
+    public User getUser(@PathVariable String id) {
+        log.info("Inside get");
+        return userService.getUser(Long.valueOf(id));
     }
 
     @PostMapping
@@ -37,7 +39,7 @@ public class UserController {
 
     @DeleteMapping(value = "/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void deleteUser(@PathVariable Long id) {
-        userService.deleteUser(id);
+    public void deleteUser(@PathVariable String id) {
+        userService.deleteUser(Long.valueOf(id));
     }
 }
