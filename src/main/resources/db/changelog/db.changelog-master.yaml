@@ -28,3 +28,42 @@ databaseChangeLog:
                   type: varchar(50)
                   constraints:
                     nullable: false
+  - changeSet:
+      id: 2
+      author: bogdan
+      changes:
+        - createTable:
+            tableName: apartment
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: address
+                  type: varchar(50)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: number_of_rooms
+                  type: int
+                  constraints:
+                    nullable: false
+              - column:
+                  name: floor
+                  type: int
+                  constraints:
+                    nullable: false
+              - column:
+                  name: area
+                  type: int
+                  constraints:
+                    nullable: false
+              - column:
+                  name: owner
+                  type: int
+                  constraints:
+                    nullable: false
