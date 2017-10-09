@@ -96,4 +96,29 @@ databaseChangeLog:
                   type: int
                   constraints:
                     nullable: false
+  - changeSet:
+      id: 4
+      author: bogdan
+      changes:
+        - createTable:
+            tableName: land
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: address
+                  type: varchar(50)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: area
+                  type: int
+                  constraints:
+                    nullable: false
+
 

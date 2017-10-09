@@ -11,24 +11,15 @@ import javax.persistence.Table;
 @Getter
 @Setter
 @Entity
-@Table(name = "apartment")
-public class Apartment {
-    @Column(name = "id")
+@Table (name = "land")
+public class Land {
+    @Column (name = "id")
     @Id
     long id;
 
-    @Column(name = "address")
+    @Column (name = "address")
     String address;
-
-    @Column (name = "number_of_rooms")
-    int numberOfRooms;
-
-    @Column (name = "floor")
-    int floor;
 
     @Column (name = "area")
     int area;
-
-    @Column (name = "owner")
-    long owner;
 }
