@@ -67,3 +67,33 @@ databaseChangeLog:
                   type: int
                   constraints:
                     nullable: false
+  - changeSet:
+      id: 3
+      author: bogdan
+      changes:
+        - createTable:
+            tableName: house
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: address
+                  type: varchar(50)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: property_area
+                  type: int
+                  constraints:
+                    nullable: false
+              - column:
+                  name: house area
+                  type: int
+                  constraints:
+                    nullable: false
+
