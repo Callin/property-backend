@@ -92,7 +92,7 @@ databaseChangeLog:
                   constraints:
                     nullable: false
               - column:
-                  name: house area
+                  name: house_area
                   type: int
                   constraints:
                     nullable: false

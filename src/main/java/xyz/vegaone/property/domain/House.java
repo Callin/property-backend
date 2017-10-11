@@ -24,6 +24,6 @@ public class House {
     @Column(name = "property_area")
     int propertyArea;
 
-    @Column(name = "house area")
+    @Column(name = "house_area")
     int houseArea;
 }

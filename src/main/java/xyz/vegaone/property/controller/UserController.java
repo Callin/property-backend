@@ -20,7 +20,7 @@ public class UserController {
 
     @GetMapping(value = "/{id}")
     public User getUser(@PathVariable String id) {
-        log.info("Inside get");
+//        log.info("Inside get");
         return userService.getUser(Long.valueOf(id));
     }
 
