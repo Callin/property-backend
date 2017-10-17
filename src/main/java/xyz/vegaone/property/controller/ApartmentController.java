@@ -2,6 +2,7 @@ package xyz.vegaone.property.controller;
 
 
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import xyz.vegaone.property.dto.Apartment;
@@ -11,12 +12,11 @@ import xyz.vegaone.property.service.ApartmentService;
 @RequestMapping(value = "/apartment")
 @Slf4j
 public class ApartmentController {
+    @Autowired
     private ApartmentService apartmentService;
 
     @GetMapping(value = "/{id}")
-
     @ResponseStatus(HttpStatus.OK)
-
     public Apartment getApartment(@PathVariable(name = "id") String id) {
 //        log.info("Inside get");
         Apartment apartment = new Apartment();
@@ -26,9 +26,9 @@ public class ApartmentController {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public Apartment saveApartment(Apartment apartment) {
+    public Apartment saveApartment(@RequestBody Apartment apartment) {
 
-        return apartmentService.saveApartment(apartment);
+        return apartment;
     }
 
     @PutMapping

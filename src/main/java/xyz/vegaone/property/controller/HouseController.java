@@ -24,7 +24,7 @@ public class HouseController {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public House saveHouse(House house) {
+    public House saveHouse(@RequestBody House house) {
 
         return houseService.savehouse(house);
     }

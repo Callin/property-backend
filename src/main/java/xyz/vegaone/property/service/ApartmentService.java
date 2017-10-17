@@ -1,5 +1,6 @@
 package xyz.vegaone.property.service;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import xyz.vegaone.property.dao.ApartmentDao;
 import xyz.vegaone.property.dto.Apartment;
@@ -7,6 +8,7 @@ import xyz.vegaone.property.mapper.ApartmentMapper;
 
 @Service
 public class ApartmentService {
+    @Autowired
     private ApartmentDao apartmentDao;
 
     private ApartmentMapper apartmentMapper;

@@ -5,7 +5,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 
-//@JsonInclude(JsonInclude.Include.NON_NULL)
+@JsonInclude(JsonInclude.Include.NON_NULL)
 @Getter
 @Setter
 public class Apartment {

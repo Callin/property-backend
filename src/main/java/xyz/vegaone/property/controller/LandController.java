@@ -23,7 +23,7 @@ public class LandController {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public Land saveLand(Land land) {
+    public Land saveLand(@RequestBody Land land) {
 
         return landService.saveLand(land);
     }
