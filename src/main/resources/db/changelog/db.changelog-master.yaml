@@ -120,5 +120,29 @@ databaseChangeLog:
                   type: int
                   constraints:
                     nullable: false
+  - changeSet:
+      id: 5
+      author: bogdan
+      changes:
+        - createTable:
+            tableName: garage
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: address
+                  type: varchar(50)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: area
+                  type: int
+                  constraints:
+                    nullable: false
 
 
